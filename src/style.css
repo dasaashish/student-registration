@@ -1,67 +1,133 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;  /* Light gray background */
     margin: 0;
     padding: 0;
-  }
-  
-  h1 {
-    text-align: center;
     color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6f61;  /* A soft coral color for headings */
     margin-top: 20px;
-  }
-  
-  div {
-    padding: 20px;
-    margin: 10px auto;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Card-like sections with soft shadow */
+div {
+    padding: 25px;
+    margin: 20px auto;
     max-width: 600px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  button {
-    padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e1e1e1; /* Subtle border */
+}
+
+div:hover {
+    transform: translateY(-8px); /* Subtle hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Button styling with gradient background */
+button {
+    padding: 12px 18px;
+    background: linear-gradient(145deg, #6a11cb, #2575fc); /* Purple to blue gradient */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  input, select {
-    padding: 10px;
-    margin: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for buttons */
+}
+
+button:hover {
+    background: linear-gradient(145deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Input and select fields with rounded borders */
+input, select {
+    padding: 12px;
+    margin: 8px 0;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  ul {
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #ff6f61; /* Coral color on focus */
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5); /* Coral glow */
+}
+
+/* Unordered list styling */
+ul {
     padding: 0;
     list-style-type: none;
-  }
-  
-  li {
-    background-color: #f4f4f4;
-    padding: 10px;
-    margin-bottom: 8px;
-    border-radius: 5px;
-  }
-  
-  li button {
-    background-color: #dc3545;
+    margin: 0;
+}
+
+/* List items with custom background and hover effects */
+li {
+    background-color: #fafafa; /* Light gray background for list items */
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    background-color: #e3f2fd; /* Soft blue on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for hover effect */
+}
+
+/* Button inside list items */
+li button {
+    background-color: #ff6f61; /* Coral color */
     color: white;
     margin-left: 10px;
-  }
-  
-  li button:hover {
-    background-color: #c82333;
-  }
-  
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for button */
+}
+
+li button:hover {
+    background-color: #e65137; /* Darker coral on hover */
+    transform: scale(1.05);
+}
+
+/* Responsive Design (Mobile view adjustments) */
+@media (max-width: 768px) {
+    div {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button, li button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    input, select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
